@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>
+        FAQ
+    </title>
+
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+    
+    <link rel="stylesheet" href="/static/faq.css">
+
+    <!-- Google API to get the Merriweather font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<header>
+    <h1 id='h1-first'>The Trader's<span id='span-h1'>Den</span></h1>
+    <nav>
+        <ul id='ul-box'>
+            <li id='li-item'><a href="/main" id='a-link'>Subreddit Search</a></li>
+            <li id='li-item'><a href="/main-stock" id='a-link'>Stock Search</a></li>
+            <li id='li-item'><a href="/faq" id='a-link'>FAQ</a></li>
+            <li id='li-item'><a href="/" id='a-link' style='color: #C4D022;'>Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <h2 class='question'>Why use the Trader's Den?</h2>
+    <div class='answer-box'>
+        <p class='answer'>With the rise of communities around the internet, it has become a must for every investor and
+            trader to take the public sentiment towards a company
+            into consideration. As we have all seen in the $GME craze, outstanding and parabolic returns can be made by
+            riding those dynamic trends. The Trader's Den
+            offers an easy and simplified way of accessing the public sentiment on reddit towards a specific stock
+            ticker.
+        </p>
+    </div>
+    <h2 class='question'>How to use subreddit search?</h2>
+    <div class='answer-box'>
+        <p class='answer'> The subreddit search is a tool to compile the daily hottest threads on a given subreddit.
+            This tool will allow you to specify a certain subreddit
+            and extract the title with a hyperlink to the 'n' top threads with the most upvotes. The hyperlink can be
+            used by clicking on the given entry.
+        </p>
+    </div>
+    <h2 class='question'>How to use stock search</h2>
+    <div class='answer-box'>
+        <p class='answer'> In the stock search page, you can write any stock ticker of your choice and view its graph/
+            market info/ number of mentions in 'wallstreetbets' (bottom right)
+            If it is your first time entering the ticker, expect a moderate wait of approx 17 seconds as fetching the
+            number of mentions for a stock ticker takes time due to
+            the sheer amount of comments and posts. (Although there is a certain limit on the amount of posts that can
+            be analysed daily). This value is then cached in your cookies
+            so incase you want to access it again it will be much faster to fetch.
+        </p>
+    </div>
+
+    <h2 class='question'>Where do you get all your data from ?</h2>
+    <div class='answer-box'>
+        <p class='answer'> All the subreddit data stems from reddit PRAW API which acts as a wrapper for the original
+            reddit API. All this data is compiled live from reddit
+            with the given constraints given by you our user. All stock related data is obtained from yahoo finance via
+            the get_stock_ticker method. This allows us to fetch
+            real time data given by a reliable source (yahoo).
+        </p>
+    </div>
+</body>
+
+</html>

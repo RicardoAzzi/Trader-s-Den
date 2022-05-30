@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>
+        {{stock_name}}
+    </title>
+
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+
+    <link rel="stylesheet" href="/static/stock.css">
+
+    <!-- Google API to get the Merriweather font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    <header>
+        <h1 id='h1-first'>The Trader's<span id='span-h1'>Den</span></h1>
+        <nav>
+            <ul id='ul-box'>
+                <li id='li-item'><a href="/main" id='a-link'>Subreddit Search</a></li>
+                <li id='li-item'><a href="/main-stock" id='a-link'>Stock Search</a></li>
+                <li id='li-item'><a href="/faq" id='a-link'>FAQ</a></li>
+                <li id='li-item'><a href="/" id='a-link' style='color: #C4D022;'>Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body>
+    <h1 class='title-entry'>{{stock_name}}</h1>
+    <div class='description-box'>
+        <p class='description'>{{information['longBusinessSummary']}}</p>
+    </div>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="table-td">Previous close: <span
+                        style="color:red; font-weight: normal;">{{information['previousClose']}}</span> </td>
+                <td class="table-td">Open: <span style="color:red; font-weight: normal;">{{information['open']}}</span>
+                </td>
+                <td class="table-td">Bid: <span style="color:red; font-weight: normal;">{{information['bid']}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-td">Ask: <span style="color:red; font-weight: normal;">{{information['ask']}}</span>
+                </td>
+                <td class="table-td">Day's low: <span
+                        style="color:red; font-weight: normal;">{{information['dayLow']}}</span> </td>
+                <td class="table-td">Day's high: <span
+                        style="color:red; font-weight: normal;">{{information['dayHigh']}}</span> </td>
+            </tr>
+            <tr>
+                <td class="table-td">Volume: <span
+                        style="color:red; font-weight: normal;">{{information['volume']}}</span> </td>
+                <td class="table-td">Average volume: <span
+                        style="color:red; font-weight: normal;">{{information['averageVolume']}}</span> </td>
+                <td class="table-td">Market cap: <span
+                        style="color:red; font-weight: normal;">{{information['marketCap']}}</span> </td>
+            </tr>
+            <tr>
+                <td class="table-td">Beta: <span style="color:red; font-weight: normal;">{{information['beta']}}</span>
+                </td>
+                <td class="table-td">Forward EPS: <span
+                        style="color:red; font-weight: normal;">{{information['forwardEps']}}</span> </td>
+                <td class="table-td">Last split date: <span
+                        style="color:red; font-weight: normal;">{{information['lastSplitDate']}}</span> </td>
+            </tr>
+            <tr>
+                <td class="table-td">Gross profits: <span
+                        style="color:red; font-weight: normal;">{{information['grossProfits']}}</span> </td>
+                <td class="table-td">Profit margins: <span
+                        style="color:red; font-weight: normal;">{{information['profitMargins']}}</span> </td>
+                <td class="table-td">The number of mentions for <span
+                        style="color:red; font-weight: normal;">{{stock_name}}</span> in the hot threads is <span
+                        style="color:red;">{{occ}}</span> </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Taken from a helpful stackoverflow thread: https://stackoverflow.com/questions/36262748/python-save-plotly-plot-to-local-file-and-insert-into-html -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <div class='stock-chart-box'>
+        {{bar_chart_1}}
+    </div>
+</body>
+
+</html>

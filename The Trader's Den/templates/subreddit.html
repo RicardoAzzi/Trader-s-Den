@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>{{title}}</title>
+
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+
+    <link rel="stylesheet" href="/static/subreddit.css">
+
+    <!-- Google API to get the Merriweather font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1 id='h1-first'>The Trader's<span id='span-h1'>Den</span></h1>
+    <nav>
+        <ul id='ul-box'>
+            <li id='li-item'><a href="/main" id='a-link'>Subreddit Search</a></li>
+            <li id='li-item'><a href="/main-stock" id='a-link'>Stock Search</a></li>
+            <li id='li-item'><a href="/faq" id='a-link'>FAQ</a></li>
+            <li id='li-item'><a href="/" id='a-link' style='color: #C4D022;'>Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <h1 class='title-entry'>Top <span class='title-number'>{{n}}</span> hot posts today</h1>
+    {% for key, value in display_list.items() %}
+    <!-- Don't worry about the style='' error it just works :) jinja2 is weird -->
+    <p class='entry-text'><a href={{value}} target="_blank" class='entry' style='color:{{color_l[loop.index]}}'>{{key}}
+        </a></p>
+    {% endfor %}
+</body>
+
+</html>

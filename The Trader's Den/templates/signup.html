@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="/static/signup_page.css">
+
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+</head>
+
+<body>
+
+    <form class="signup" action="/signup" , method='POST'>
+        <div class="signup-logo-box">
+            <img class="signup-logo" src="/static/traders_den.png" alt="Logo">
+        </div>
+        <div class='signup-content'>
+            <h1 class='signup-title'>The Trader's den</h1>
+            <h2 class='signup-error'>{{error}}</h2>
+            {{signup.username(class='signup-input', placeholder='username', required='required')}}
+            {{signup.password(class='signup-input', placeholder='password', required='required')}}
+            {{signup.submit_button(class='signup-button')}}
+        </div>
+    </form>
+    <p class='signup-text'>or</p>
+    <div align='center'>
+        <form action="/">
+            <input class='signup-back' type="submit" , value='Go back'>
+        </form>
+    </div>
+</body>
+
+</html>

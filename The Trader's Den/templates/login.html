@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login_page.css">
+
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+
+</head>
+
+<body>
+    <form class="login" action="/" , method='POST'>
+        <div class="login-box">
+            <img class="login-logo" src="/static/traders_den.png" alt="Logo">
+        </div>
+        <div class='login-content'>
+            <h1 class='login-title'>The Trader's den</h1>
+            <h2 class='login-error'>{{error_msg}}</h2>
+            {{form.username(class='login-input', placeholder='username', required='required')}}
+            {{form.password(class='login-input', placeholder='password', required='required')}}
+            {{form.login_button(class='login-button')}}
+
+        </div>
+    </form>
+    <p class='login-text'>or</p>
+    <div align='center'>
+        <form action="/signup">
+            <input class='login-signup' type="submit" , value='Sign Up'>
+        </form>
+    </div>
+</body>
+
+</html>

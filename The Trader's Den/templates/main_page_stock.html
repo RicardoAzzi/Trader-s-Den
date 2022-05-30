@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        The Trader's Den
+    </title>
+    <!--Shortcut icon source: https://www.kindpng.com/imgv/JomRix_transparent-dollar-sign-icon-png-green-dollar-sign/ -->
+    <link rel="shortcut icon" type="image/png" href="../static/dollar_sign.png" />
+
+    <link rel="stylesheet" href="/static/main_page_stock.css">
+
+    <!-- Google API to get the Merriweather font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1 id='h1-first'>The Trader's<span id='span-h1'>Den</span></h1>
+    <nav>
+        <ul id='ul-box'>
+            <li id='li-item'><a href="/main" id='a-link'>Subreddit Search</a></li>
+            <li id='li-item'><a href="/main-stock" id='a-link'>Stock Search</a></li>
+            <li id='li-item'><a href="/faq" id='a-link'>FAQ</a></li>
+            <li id='li-item'><a href="/" id='a-link' style='color: #C4D022;'>Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class='search-box'>
+        <form action="/stock" method="post">
+            {{stock_form.stock_name(placeholder='Stock Ticker', required='required', class='first-box')}}
+
+            {{stock_form.submit_button(class='submit-button', formmethod="post")}}
+        </form>
+    </div>
+    <p class='error'>{{error}}</p>
+</body>
+
+</html>
