@@ -3,8 +3,10 @@ A flask web app targeted at financial markets traders which helps them compile a
 
 To run the app: 
 '''
+
 Python3 traders_den.py
 or
 python traders_den.py
+
 '''
 
